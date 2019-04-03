@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1523009629 source:/sysOp/lab4/cw1/cw1/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	<signal.h>
+

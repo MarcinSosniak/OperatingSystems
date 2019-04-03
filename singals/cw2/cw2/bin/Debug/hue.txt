@@ -1,0 +1,305 @@
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Asked for permission by : 9169
+Asked for permission by : 9170
+Created new thread 9171
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Asked for permission by : 9169
+Asked for permission by : 9170
+Asked for permission by : 9171
+Asked for permission by : 9172
+Created new thread 9173
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Asked for permission by : 9169
+Asked for permission by : 9170
+Asked for permission by : 9171
+Created new thread 9172
+Asked for permission by : 9163
+Asked for permission by : 9164
+Created new thread 9165
+Created new thread 9163
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Asked for permission by : 9169
+Created new thread 9170
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Created new thread 9168
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Created new thread 9169
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Created new thread 9167
+Asked for permission by : 9163
+Created new thread 9164
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Created new thread 9166
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Asked for permission by : 9169
+Asked for permission by : 9170
+Asked for permission by : 9171
+Asked for permission by : 9172
+Asked for permission by : 9173
+Recieved real time signal of number SIGRTMIN+27 from 9171
+Recieved real time signal of number SIGRTMIN+27 from 9173
+Recieved real time signal of number SIGRTMIN+27 from 9172
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Recieved real time signal of number SIGRTMIN+27 from 9165
+Recieved real time signal of number SIGRTMIN+27 from 9163
+Recieved real time signal of number SIGRTMIN+27 from 9170
+Recieved real time signal of number SIGRTMIN+27 from 9166
+Recieved real time signal of number SIGRTMIN+27 from 9168
+Recieved real time signal of number SIGRTMIN+27 from 9169
+Recieved real time signal of number SIGRTMIN+27 from 9164
+Asked for permission by : 9174Recieved real time signal of number SIGRTMIN+27 from 9167
+
+Asked for permission by : 9176
+Asked for permission by : 9175
+Created new thread 9178
+Asked for permission by : 9163
+Asked for permission by : 9164
+Asked for permission by : 9165
+Asked for permission by : 9166
+Asked for permission by : 9167
+Asked for permission by : 9168
+Asked for permission by : 9169
+Asked for permission by : 9170
+Asked for permission by : 9171
+Asked for permission by : 9172
+Asked for permission by : 9173
+Recieved real time signal of number SIGRTMIN+27 from 9171
+Recieved real time signal of number SIGRTMIN+27 from 9173
+Recieved real time signal of number SIGRTMIN+27 from 9172
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Asked for permission by : 9162
+Recieved real time signal of number SIGRTMIN+27 from 9165
+Recieved real time signal of number SIGRTMIN+27 from 9163
+Recieved real time signal of number SIGRTMIN+27 from 9170
+Recieved real time signal of number SIGRTMIN+27 from 9166
+Recieved real time signal of number SIGRTMIN+27 from 9168
+Recieved real time signal of number SIGRTMIN+27 from 9169
+Recieved real time signal of number SIGRTMIN+27 from 9164
+Asked for permission by : 9174Recieved real time signal of number SIGRTMIN+27 from 9167
+
+Asked for permission by : 9176
+Asked for permission by : 9175
+Asked for permission by : 9178
+Asked for permission by : 9179
+Asked for permission by : 9180
+Asked for permission by : 9181
+Asked for permission by : 9182
+Children finished it's life pid:9163 and slept for 6912sChildren finished it's life pid:9164 and slept for 6912sChildren finished it's life pid:9165 and slept for 6912sChildren finished it's life pid:9166 and slept for 6912sChildren finished it's life pid:9167 and slept for 6912sChildren finished it's life pid:9168 and slept for 6912sChildren finished it's life pid:9169 and slept for 6912sChildren finished it's life pid:9170 and slept for 6912sChildren finished it's life pid:9171 and slept for 6912sChildren finished it's life pid:9172 and slept for 6912sChildren finished it's life pid:9173 and slept for 6912sRecieved real time signal of number SIGRTMIN+27 from 9178
+Children finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sChildren finished it's life pid:9178 and slept for 6912sCreated new thread 10451
+Asked for permission by : 10451
+Asked for permission by : 10452
+Created new thread 10453
+Asked for permission by : 10451
+Created new thread 10452
+Asked for permission by : 10451
+Asked for permission by : 10452
+Asked for permission by : 10453
+Recieved real time signal of number SIGRTMIN+18 from 10453
+Recieved real time signal of number SIGRTMIN+18 from 10451
+Recieved real time signal of number SIGRTMIN+18 from 10452
+Asked for permission by : 10450
+Asked for permission by : 10454
+Children finished it's life pid:10451 and slept for 4608sChildren finished it's life pid:10452 and slept for 4608sChildren finished it's life pid:10453 and slept for 4608sChildren finished it's life pid:10453 and slept for 4608sHello world!
+Asked for permission by : 10461
+Created new thread 10462
+Asked for permission by : 10461
+Asked for permission by : 10462
+Created new thread 10463
+Created new thread 10461
+Asked for permission by : 10461
+Asked for permission by : 10462
+Asked for permission by : 10463
+Asked for permission by : 10460
+Recieved real time signal of number SIGRTMIN+19 from 10463
+Recieved real time signal of number SIGRTMIN+19 from 10462
+Recieved real time signal of number SIGRTMIN+19 from 10461
+Asked for permission by : 10465
+Children finished it's life pid:10461 and slept for 4864sChildren finished it's life pid:10462 and slept for 4864s
+
+
+huehueuheu
+
+Created new thread 10526
+
+
+huehueuheu
+
+Asked for permission by : 10526
+
+
+huehueuheu
+
+Created new thread 10527
+
+
+huehueuheu
+
+Asked for permission by : 10526
+
+
+huehueuheu
+
+Asked for permission by : 10527
+
+
+huehueuheu
+
+Created new thread 10528
+
+
+huehueuheu
+
+Asked for permission by : 10526
+
+
+huehueuheu
+
+Asked for permission by : 10527
+
+
+huehueuheu
+
+Asked for permission by : 10528
+Asked for permission by : 10525
+
+
+huehueuheu
+
+Recieved real time signal of number SIGRTMIN+22 from 10526
+Recieved real time signal of number SIGRTMIN+22 from 10527
+Recieved real time signal of number SIGRTMIN+22 from 10528
+Asked for permission by : 10530
+Children finished it's life pid:10526 and slept for 5632sChildren finished it's life pid:10527 and slept for 5632sChildren finished it's life pid:10528 and slept for 5632s
+
+
+huehueuheu
+
+Asked for permission by : 12099
+
+
+huehueuheu
+
+Asked for permission by : 12100
+
+
+huehueuheu
+
+Created new thread 12101
+
+
+huehueuheu
+
+Asked for permission by : 12099
+
+
+huehueuheu
+
+Created new thread 12100
+
+
+huehueuheu
+
+Created new thread 12099
+
+
+huehueuheu
+
+Asked for permission by : 12099
+
+
+huehueuheu
+
+Asked for permission by : 12100
+
+
+huehueuheu
+
+Asked for permission by : 12101
+Asked for permission by : 12098
+Recieved real time signal of number SIGRTMIN+28 from 12100
+Recieved real time signal of number SIGRTMIN+26 from 12099
+Recieved real time signal of number SIGRTMIN+14 from 12101
+
+
+huehueuheu
+
+Asked for permission by : 12102
+Children finished it's life pid:12099 and slept for 6656sChildren finished it's life pid:12100 and slept for 7168sChildren finished it's life pid:12101 and slept for 3584sChildren finished it's life pid:12101 and slept for 3584sHello world!
+
+
+huehueuheu
+
+Asked for permission by : 12099
+
+
+huehueuheu
+
+Asked for permission by : 12100
+
+
+huehueuheu
+
+Asked for permission by : 12101
+Asked for permission by : 12098
+Recieved real time signal of number SIGRTMIN+28 from 12100
+Recieved real time signal of number SIGRTMIN+26 from 12099
+Recieved real time signal of number SIGRTMIN+14 from 12101
+
+
+huehueuheu
+
+Created new thread 12102

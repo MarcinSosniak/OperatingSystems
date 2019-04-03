@@ -1,0 +1,304 @@
+#!/bin/bash
+
+                                        
+make -f makefile.txt shared
+
+
+./zad1_shared 64000 1024 1 1 100
+
+./zad1_shared 64000 1024 1 2 100
+
+./zad1_shared 64000 1024 1 3 100
+
+
+./zad1_shared 128000 2048 1 1 10000 
+
+./zad1_shared 128000 2048 1 2 10000
+
+./zad1_shared 128000 2048 1 3 10000
+
+./zad1_shared 128000 2048 2 3 10000
+
+./zad1_shared 128000 2048 2 2 10000
+
+./zad1_shared 128000 2048 2 1 10000
+
+./zad1_shared 64000 1024 2 1 100
+
+./zad1_shared 64000 1024 2 2 100
+
+./zad1_shared 64000 1024 2 3 100
+
+
+make -f makefile.txt static
+
+
+./zad1_static 64000 1024 1 1 100
+
+./zad1_static 64000 1024 1 2 100
+
+./zad1_static 64000 1024 1 3 100
+
+
+./zad1_static 128000 2048 1 1 10000 
+
+./zad1_static 128000 2048 1 2 10000
+
+./zad1_static 128000 2048 1 3 10000
+
+./zad1_static 128000 2048 2 3 10000
+
+./zad1_static 128000 2048 2 2 10000
+
+./zad1_static 128000 2048 2 1 10000
+
+./zad1_static 64000 1024 2 1 100
+
+./zad1_static 64000 1024 2 2 100
+
+./zad1_static 64000 1024 2 3 100                                        
+
+echo "";echo ""; echo "" 
+
+echo "OPCJA -O1"
+
+                                        
+make -f makefile.txt sharedO1                                                 
+
+
+./zad1_shared 64000 1024 1 1 100
+
+./zad1_shared 64000 1024 1 2 100
+
+./zad1_shared 64000 1024 1 3 100
+
+
+./zad1_shared 128000 2048 1 1 10000 
+
+./zad1_shared 128000 2048 1 2 10000
+
+./zad1_shared 128000 2048 1 3 10000
+
+./zad1_shared 128000 2048 2 3 10000
+
+./zad1_shared 128000 2048 2 2 10000
+
+./zad1_shared 128000 2048 2 1 10000
+
+./zad1_shared 64000 1024 2 1 100
+
+./zad1_shared 64000 1024 2 2 100
+
+./zad1_shared 64000 1024 2 3 100
+
+
+make -f makefile.txt staticO1
+
+
+./zad1_static 64000 1024 1 1 100
+
+./zad1_static 64000 1024 1 2 100
+
+./zad1_static 64000 1024 1 3 100
+
+
+./zad1_static 128000 2048 1 1 10000 
+
+./zad1_static 128000 2048 1 2 10000
+
+./zad1_static 128000 2048 1 3 10000
+
+./zad1_static 128000 2048 2 3 10000
+
+./zad1_static 128000 2048 2 2 10000
+
+./zad1_static 128000 2048 2 1 10000
+
+./zad1_static 64000 1024 2 1 100
+
+./zad1_static 64000 1024 2 2 100
+
+./zad1_static 64000 1024 2 3 100  
+
+echo "";echo ""; echo "" 
+
+echo "OPCJA -O2"
+
+                                        
+make -f makefile.txt sharedO2
+
+
+./zad1_shared 64000 1024 1 1 100
+
+./zad1_shared 64000 1024 1 2 100
+
+./zad1_shared 64000 1024 1 3 100
+
+
+./zad1_shared 128000 2048 1 1 10000 
+
+./zad1_shared 128000 2048 1 2 10000
+
+./zad1_shared 128000 2048 1 3 10000
+
+./zad1_shared 128000 2048 2 3 10000
+
+./zad1_shared 128000 2048 2 2 10000                                                                           
+
+./zad1_shared 128000 2048 2 1 10000
+
+./zad1_shared 64000 1024 2 1 100
+
+./zad1_shared 64000 1024 2 2 100
+
+./zad1_shared 64000 1024 2 3 100
+
+
+make -f makefile.txt staticO2
+
+
+./zad1_static 64000 1024 1 1 100
+
+./zad1_static 64000 1024 1 2 100
+
+./zad1_static 64000 1024 1 3 100
+
+
+./zad1_static 128000 2048 1 1 10000 
+
+./zad1_static 128000 2048 1 2 10000
+
+./zad1_static 128000 2048 1 3 10000
+
+./zad1_static 128000 2048 2 3 10000
+
+./zad1_static 128000 2048 2 2 10000
+
+./zad1_static 128000 2048 2 1 10000
+
+./zad1_static 64000 1024 2 1 100
+
+./zad1_static 64000 1024 2 2 100
+
+./zad1_static 64000 1024 2 3 100    
+echo "";echo ""; echo "" 
+
+echo "OPCJA -O3"
+                                                                 
+make -f makefile.txt sharedO3
+
+
+./zad1_shared 64000 1024 1 1 100
+
+./zad1_shared 64000 1024 1 2 100
+
+./zad1_shared 64000 1024 1 3 100
+
+
+./zad1_shared 128000 2048 1 1 10000 
+
+./zad1_shared 128000 2048 1 2 10000
+
+./zad1_shared 128000 2048 1 3 10000
+
+./zad1_shared 128000 2048 2 3 10000
+
+./zad1_shared 128000 2048 2 2 10000
+
+./zad1_shared 128000 2048 2 1 10000
+
+./zad1_shared 64000 1024 2 1 100
+
+./zad1_shared 64000 1024 2 2 100
+
+./zad1_shared 64000 1024 2 3 100
+
+
+make -f makefile.txt staticO3
+
+
+./zad1_static 64000 1024 1 1 100
+
+./zad1_static 64000 1024 1 2 100
+
+./zad1_static 64000 1024 1 3 100
+
+
+./zad1_static 128000 2048 1 1 10000 
+
+./zad1_static 128000 2048 1 2 10000
+
+./zad1_static 128000 2048 1 3 10000
+
+./zad1_static 128000 2048 2 3 10000
+
+./zad1_static 128000 2048 2 2 10000
+
+./zad1_static 128000 2048 2 1 10000
+
+./zad1_static 64000 1024 2 1 100
+
+./zad1_static 64000 1024 2 2 100
+
+./zad1_static 64000 1024 2 3 100                                        
+
+echo "";echo ""; echo "" 
+
+echo "OPCJA -Os"
+                                                                 
+make -f makefile.txt sharedOs
+
+
+./zad1_shared 64000 1024 1 1 100
+
+./zad1_shared 64000 1024 1 2 100
+
+./zad1_shared 64000 1024 1 3 100                                                                            
+
+
+./zad1_shared 128000 2048 1 1 10000 
+
+./zad1_shared 128000 2048 1 2 10000
+
+./zad1_shared 128000 2048 1 3 10000
+
+./zad1_shared 128000 2048 2 3 10000
+
+./zad1_shared 128000 2048 2 2 10000
+
+./zad1_shared 128000 2048 2 1 10000
+
+./zad1_shared 64000 1024 2 1 100
+
+./zad1_shared 64000 1024 2 2 100
+
+./zad1_shared 64000 1024 2 3 100
+
+
+make -f makefile.txt staticOs
+
+
+./zad1_static 64000 1024 1 1 100
+
+./zad1_static 64000 1024 1 2 100
+
+./zad1_static 64000 1024 1 3 100
+
+
+./zad1_static 128000 2048 1 1 10000 
+
+./zad1_static 128000 2048 1 2 10000
+
+./zad1_static 128000 2048 1 3 10000
+
+./zad1_static 128000 2048 2 3 10000
+
+./zad1_static 128000 2048 2 2 10000
+
+./zad1_static 128000 2048 2 1 10000
+
+./zad1_static 64000 1024 2 1 100
+
+./zad1_static 64000 1024 2 2 100
+
+./zad1_static 64000 1024 2 3 100                                        

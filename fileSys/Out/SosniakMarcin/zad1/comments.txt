@@ -1,0 +1,4 @@
+zasakakujaco dzialanie wersji z bilbiotekiami jezyka C jest minimalnie szybsze
+niz z bilbiotekami systemowymi. Zaskakujaca jest rowniez fakt ze wiekszosc czasu
+program spedzil w trybie uzytkownika a nie w trybie jadra, w stosunku np 5-1
+

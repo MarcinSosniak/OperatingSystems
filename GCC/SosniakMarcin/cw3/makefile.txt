@@ -1,0 +1,195 @@
+CC = gcc -Wall -w
+LIB = myAlloc
+OUTNAME = zad1
+MAIN = main
+
+		
+shared:
+
+	# zbuduj biblioteke wspoldzielona .so
+	$(CC) -fPIC -c $(LIB).c -o $(LIB).o
+	$(CC) -fPIC -shared -o lib$(LIB).so $(LIB).o
+
+	# link
+	$(CC) -Wl,-rpath=. -L. -o $(OUTNAME)_shared $(MAIN).c -l$(LIB)
+
+	# clear
+	rm -f *.o
+		
+		
+
+static:
+	# kompilacja zrodla
+	$(CC) -c $(LIB).c -o $(LIB).o
+
+	# statyczna .a
+	ar rcs lib$(LIB).a $(LIB).o
+
+	$(CC) -static $(MAIN).c -L. -l$(LIB) -o $(OUTNAME)_static
+
+
+	rm -f *.o	
+
+
+dynamic:
+	# zbuduj biblioteke wspoldzielona .so
+	$(CC) -fPIC -c $(LIB).c -o $(LIB).o
+	$(CC) -Wl,-rpath=. -fPIC -shared -o lib$(LIB).so $(LIB).o
+
+
+	$(CC) -L. -o $(OUTNAME)_dynamic $(MAIN).c -ldl -D DLL
+
+
+	rm -f*.0
+
+
+sharedO1:
+
+	# zbuduj biblioteke wspoldzielona .so
+	$(CC) -O1 -fPIC -c $(LIB).c -o $(LIB).o
+	$(CC) -O1 -fPIC -shared -o lib$(LIB).so $(LIB).o
+
+	# link
+	$(CC) -Wl,-rpath=. -L. -o $(OUTNAME)_shared $(MAIN).c -l$(LIB)
+
+	# clear
+	rm -f *.o
+		
+		
+
+staticO1:
+	# kompilacja zrodla
+	$(CC)  -c $(LIB).c -o $(LIB).o
+
+	# statyczna .a
+	ar rcs lib$(LIB).a $(LIB).o
+
+	$(CC) -O1 -static $(MAIN).c -L. -l$(LIB) -o $(OUTNAME)_static
+
+
+	rm -f *.o	
+	
+	
+	
+
+
+
+sharedO2:
+
+	# zbuduj biblioteke wspoldzielona .so
+	$(CC) -O2 -fPIC -c $(LIB).c -o $(LIB).o
+	$(CC) -O2 -fPIC -shared -o lib$(LIB).so $(LIB).o
+
+	# link
+	$(CC) -Wl,-rpath=. -L. -o $(OUTNAME)_shared $(MAIN).c -l$(LIB)
+
+	# clear
+	rm -f *.o
+		
+		
+
+staticO2:
+	# kompilacja zrodla
+	$(CC) -O2 -c $(LIB).c -o $(LIB).o
+
+	# statyczna .a
+	ar rcs lib$(LIB).a $(LIB).o
+
+	$(CC) -O2 -static $(MAIN).c -L. -l$(LIB) -o $(OUTNAME)_static
+
+
+	rm -f *.o	
+
+
+sharedO3:
+
+	# zbuduj biblioteke wspoldzielona .so
+	$(CC) -O3 -fPIC -c $(LIB).c -o $(LIB).o
+	$(CC) -O3 -fPIC -shared -o lib$(LIB).so $(LIB).o
+
+	# link
+	$(CC) -Wl,-rpath=. -L. -o $(OUTNAME)_shared $(MAIN).c -l$(LIB)
+
+	# clear
+	rm -f *.o
+		
+		
+
+staticO3:
+	# kompilacja zrodla
+	$(CC) -O3 -c $(LIB).c -o $(LIB).o
+
+	# statyczna .a
+	ar rcs lib$(LIB).a $(LIB).o
+
+	$(CC) -O3 -static $(MAIN).c -L. -l$(LIB) -o $(OUTNAME)_static
+
+
+	rm -f *.o	
+
+sharedOs: 
+
+	# zbuduj biblioteke wspoldzielona .so
+	$(CC) -Os -fPIC -c $(LIB).c -o $(LIB).o
+	$(CC) -Os -fPIC -shared -o lib$(LIB).so $(LIB).o
+
+	# link
+	$(CC) -Wl,-rpath=. -L. -o $(OUTNAME)_shared $(MAIN).c -l$(LIB)
+
+	# clear
+	rm -f *.o
+		
+		
+
+staticOs:
+	# kompilacja zrodla
+	$(CC) -Os -c $(LIB).c -o $(LIB).o
+
+	# statyczna .a
+	ar rcs lib$(LIB).a $(LIB).o
+
+	$(CC) -Os -static $(MAIN).c -L. -l$(LIB) -o $(OUTNAME)_static
+
+
+	rm -f *.o	
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

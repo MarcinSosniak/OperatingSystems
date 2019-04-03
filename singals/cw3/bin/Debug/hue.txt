@@ -1,0 +1,40 @@
+
+
+
+ mother lives 
+
+
+L signals send
+
+
+mother awaits 
+
+signal Recieved Mother
+sygnaly wysalne przez Matke 10
+sygnaly odebrane przez Matke 1
+
+
+
+child lives
+
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+signal Recieved Child
+child send
+dziecko otrzymalo 10 sygnalowm

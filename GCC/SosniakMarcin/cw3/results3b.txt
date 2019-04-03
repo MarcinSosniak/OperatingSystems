@@ -1,0 +1,1682 @@
+hue
+# zbuduj biblioteke wspoldzielona .so
+gcc -Wall -w -fPIC -c myAlloc.c -o myAlloc.o
+gcc -Wall -w -fPIC -shared -o libmyAlloc.so myAlloc.o
+# link
+gcc -Wall -w -Wl,-rpath=. -L. -o zad1_shared main.c -lmyAlloc
+# clear
+rm -f *.o
+alloc1(64000,1024) empty
+realTime:7729.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:17276484.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(38334) empty
+realTime:172759536.000000 ns
+userTime:17|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:214688.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:7389.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:22274227.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:317370.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:92581.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:23359884.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i), add1(i) x 100 empty
+realTime:217830.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:9390.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85675213.000000 ns
+userTime:3|ncoreTime:5 
+
+search1(35877) empty
+realTime:667490371.000000 ns
+userTime:66|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:42406610.000000 ns
+userTime:4|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:8543.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:88890885.000000 ns
+userTime:3|ncoreTime:5 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:43633584.000000 ns
+userTime:4|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:8050.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86004558.000000 ns
+userTime:2|ncoreTime:5 
+
+remove1(i), add1(i) x 10000 empty
+realTime:40292143.000000 ns
+userTime:4|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:624618.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:79781354.000000 ns
+userTime:2|ncoreTime:6 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2396291.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:613131.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:76505745.000000 ns
+userTime:2|ncoreTime:4 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2980244.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:624588.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77318156.000000 ns
+userTime:2|ncoreTime:5 
+
+search2(35570) empty
+realTime:657222186.000000 ns
+userTime:66|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2830085.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:306418.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19943116.000000 ns
+userTime:1|ncoreTime:0 
+
+search2(61610) empty
+realTime:164101290.000000 ns
+userTime:17|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:22214.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:292144.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19687948.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:24158.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:310447.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:20154243.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) add2(i) x 100 empty
+realTime:20926.000000 ns
+userTime:0|ncoreTime:0 
+
+# kompilacja zrodla
+gcc -Wall -w -c myAlloc.c -o myAlloc.o
+# statyczna .a
+ar rcs libmyAlloc.a myAlloc.o
+gcc -Wall -w -static main.c -L. -lmyAlloc -o zad1_static
+rm -f *.o	
+alloc1(64000,1024) empty
+realTime:4727.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:19158778.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(61610) empty
+realTime:174225858.000000 ns
+userTime:16|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:304658.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:9556.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:23546871.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:223124.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:4588.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:18968340.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i), add1(i) x 100 empty
+realTime:212513.000000 ns
+userTime:0|ncoreTime:1 
+
+alloc1(128000,2048) empty
+realTime:4556.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:88836875.000000 ns
+userTime:3|ncoreTime:5 
+
+search1(71727) empty
+realTime:641201791.000000 ns
+userTime:64|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:44923377.000000 ns
+userTime:5|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:4591.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:84892457.000000 ns
+userTime:2|ncoreTime:5 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:44350830.000000 ns
+userTime:5|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:5255.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86788618.000000 ns
+userTime:3|ncoreTime:5 
+
+remove1(i), add1(i) x 10000 empty
+realTime:43407869.000000 ns
+userTime:4|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:631606.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77320164.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2460608.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:603074.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75210937.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3017427.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:613947.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75507170.000000 ns
+userTime:2|ncoreTime:5 
+
+search2(87558) empty
+realTime:634803082.000000 ns
+userTime:63|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3275679.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:320185.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:22790956.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(60169) empty
+realTime:159578018.000000 ns
+userTime:16|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:17762.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:322382.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21574015.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:21325.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:294221.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21484511.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) add2(i) x 100 empty
+realTime:19102.000000 ns
+userTime:0|ncoreTime:0 
+
+
+
+
+OPCJA -O1
+# zbuduj biblioteke wspoldzielona .so
+gcc -Wall -w -O1 -fPIC -c myAlloc.c -o myAlloc.o
+gcc -Wall -w -fPIC -shared -o libmyAlloc.so myAlloc.o
+# link
+gcc -Wall -w -Wl,-rpath=. -L. -o zad1_shared main.c -lmyAlloc
+# clear
+rm -f *.o
+alloc1(64000,1024) empty
+realTime:9809.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:16801184.000000 ns
+userTime:0|ncoreTime:0 
+
+search1(60169) empty
+realTime:41289702.000000 ns
+userTime:4|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:73638.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:12268.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:17048276.000000 ns
+userTime:0|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:49894.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:8076.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:16817812.000000 ns
+userTime:1|ncoreTime:0 
+
+remove1(i), add1(i) x 100 empty
+realTime:47734.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:7559.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:102152126.000000 ns
+userTime:3|ncoreTime:6 
+
+search1(25444) empty
+realTime:133083091.000000 ns
+userTime:14|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:10742960.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:7271.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:87047451.000000 ns
+userTime:2|ncoreTime:6 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:11621299.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:14324.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86142735.000000 ns
+userTime:4|ncoreTime:4 
+
+remove1(i), add1(i) x 10000 empty
+realTime:8973160.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:306921.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75197210.000000 ns
+userTime:3|ncoreTime:4 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2276325.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:306691.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75934805.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2968577.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:309659.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:80953629.000000 ns
+userTime:2|ncoreTime:6 
+
+search2(106160) empty
+realTime:133861206.000000 ns
+userTime:13|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3180437.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:142388.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19703558.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(44550) empty
+realTime:33161178.000000 ns
+userTime:3|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:19220.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:146803.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19542642.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:24647.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:155390.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19774662.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) add2(i) x 100 empty
+realTime:21794.000000 ns
+userTime:0|ncoreTime:0 
+
+# kompilacja zrodla
+gcc -Wall -w  -c myAlloc.c -o myAlloc.o
+# statyczna .a
+ar rcs libmyAlloc.a myAlloc.o
+gcc -Wall -w -O1 -static main.c -L. -lmyAlloc -o zad1_static
+rm -f *.o	
+alloc1(64000,1024) empty
+realTime:4394.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:19118495.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(44550) empty
+realTime:168320471.000000 ns
+userTime:17|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:274100.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:55544.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:24531457.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:211245.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:7751.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:21087464.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i), add1(i) x 100 empty
+realTime:213225.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:4903.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85065356.000000 ns
+userTime:1|ncoreTime:6 
+
+search1(8427) empty
+realTime:634353786.000000 ns
+userTime:64|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:46320190.000000 ns
+userTime:4|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:4755.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86418311.000000 ns
+userTime:0|ncoreTime:8 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:45072074.000000 ns
+userTime:4|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:3995.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:89745342.000000 ns
+userTime:2|ncoreTime:6 
+
+remove1(i), add1(i) x 10000 empty
+realTime:42119137.000000 ns
+userTime:4|ncoreTime:1 
+
+alloc2(128000,2048) empty
+realTime:604052.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75690083.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2436751.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:613105.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75032858.000000 ns
+userTime:3|ncoreTime:4 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2956993.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:611672.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77581539.000000 ns
+userTime:2|ncoreTime:5 
+
+search2(20928) empty
+realTime:637714038.000000 ns
+userTime:63|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2828745.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:302620.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21554541.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(6899) empty
+realTime:157321821.000000 ns
+userTime:16|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:17952.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:315946.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:22944219.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:22041.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:354800.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:22828065.000000 ns
+userTime:0|ncoreTime:2 
+
+remove2(i) add2(i) x 100 empty
+realTime:20694.000000 ns
+userTime:0|ncoreTime:0 
+
+
+
+
+OPCJA -O2
+# zbuduj biblioteke wspoldzielona .so
+gcc -Wall -w -O2 -fPIC -c myAlloc.c -o myAlloc.o
+gcc -Wall -w -O2 -fPIC -shared -o libmyAlloc.so myAlloc.o
+# link
+gcc -Wall -w -Wl,-rpath=. -L. -o zad1_shared main.c -lmyAlloc
+# clear
+rm -f *.o
+alloc1(64000,1024) empty
+realTime:6801.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:16938885.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(6899) empty
+realTime:36294274.000000 ns
+userTime:3|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:48256.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:7591.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:16642329.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:47825.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:5167.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:16680339.000000 ns
+userTime:0|ncoreTime:0 
+
+remove1(i), add1(i) x 100 empty
+realTime:47601.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:7503.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:102829071.000000 ns
+userTime:3|ncoreTime:6 
+
+search1(1379) empty
+realTime:143108359.000000 ns
+userTime:14|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:10731780.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:7964.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85116876.000000 ns
+userTime:3|ncoreTime:4 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:10882147.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:7378.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85727033.000000 ns
+userTime:3|ncoreTime:5 
+
+remove1(i), add1(i) x 10000 empty
+realTime:8959750.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:304819.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75489133.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2281334.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:291436.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:76018388.000000 ns
+userTime:1|ncoreTime:6 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3326301.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:292515.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77463453.000000 ns
+userTime:1|ncoreTime:6 
+
+search2(85952) empty
+realTime:143796510.000000 ns
+userTime:14|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2816461.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:166682.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19842191.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(25474) empty
+realTime:35584968.000000 ns
+userTime:4|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:19586.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:154549.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19789592.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:23186.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:140758.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19348130.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) add2(i) x 100 empty
+realTime:21286.000000 ns
+userTime:0|ncoreTime:0 
+
+# kompilacja zrodla
+gcc -Wall -w -O2 -c myAlloc.c -o myAlloc.o
+# statyczna .a
+ar rcs libmyAlloc.a myAlloc.o
+gcc -Wall -w -O2 -static main.c -L. -lmyAlloc -o zad1_static
+rm -f *.o	
+alloc1(64000,1024) empty
+realTime:8726.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:24332908.000000 ns
+userTime:0|ncoreTime:2 
+
+search1(13726) empty
+realTime:36381605.000000 ns
+userTime:4|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:61181.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:8683.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:20258083.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:107958.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:12020.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:31022155.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i), add1(i) x 100 empty
+realTime:90781.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:15749.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:102889158.000000 ns
+userTime:1|ncoreTime:8 
+
+search1(41129) empty
+realTime:148233589.000000 ns
+userTime:15|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:12472303.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:17538.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:87754898.000000 ns
+userTime:2|ncoreTime:6 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:14569781.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:5912.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85184392.000000 ns
+userTime:3|ncoreTime:4 
+
+remove1(i), add1(i) x 10000 empty
+realTime:10704091.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:382968.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:74633092.000000 ns
+userTime:1|ncoreTime:6 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2323277.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:310914.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75031094.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2969890.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:291290.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77411193.000000 ns
+userTime:2|ncoreTime:5 
+
+search2(41542) empty
+realTime:144200755.000000 ns
+userTime:14|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3136742.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:164299.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21595102.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(11563) empty
+realTime:35481960.000000 ns
+userTime:4|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:18805.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:155479.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:22219346.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:24105.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:163805.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21683171.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) add2(i) x 100 empty
+realTime:19613.000000 ns
+userTime:0|ncoreTime:0 
+
+
+
+
+OPCJA -O3
+# zbuduj biblioteke wspoldzielona .so
+gcc -Wall -w -O3 -fPIC -c myAlloc.c -o myAlloc.o
+gcc -Wall -w -O3 -fPIC -shared -o libmyAlloc.so myAlloc.o
+# link
+gcc -Wall -w -Wl,-rpath=. -L. -o zad1_shared main.c -lmyAlloc
+# clear
+rm -f *.o
+alloc1(64000,1024) empty
+realTime:7818.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:19310982.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(11563) empty
+realTime:19973291.000000 ns
+userTime:2|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:80456.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:14081.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:25757909.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:51414.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:7649.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:17179355.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i), add1(i) x 100 empty
+realTime:48644.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:11086.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:100058173.000000 ns
+userTime:3|ncoreTime:6 
+
+search1(41542) empty
+realTime:74338759.000000 ns
+userTime:8|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:11417166.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:8239.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86417742.000000 ns
+userTime:4|ncoreTime:4 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:11537477.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:8740.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:84799544.000000 ns
+userTime:3|ncoreTime:5 
+
+remove1(i), add1(i) x 10000 empty
+realTime:8999477.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:7646.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75313452.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2325699.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:7173.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75518730.000000 ns
+userTime:2|ncoreTime:5 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2954963.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:7046.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:76815665.000000 ns
+userTime:1|ncoreTime:6 
+
+search2(102756) empty
+realTime:72738412.000000 ns
+userTime:7|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2872473.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:7269.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19975786.000000 ns
+userTime:1|ncoreTime:0 
+
+search2(18802) empty
+realTime:19806272.000000 ns
+userTime:2|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:20670.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:7487.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19799076.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:23334.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:7565.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19726240.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) add2(i) x 100 empty
+realTime:20856.000000 ns
+userTime:0|ncoreTime:0 
+
+# kompilacja zrodla
+gcc -Wall -w -O3 -c myAlloc.c -o myAlloc.o
+# statyczna .a
+ar rcs libmyAlloc.a myAlloc.o
+gcc -Wall -w -O3 -static main.c -L. -lmyAlloc -o zad1_static
+rm -f *.o	
+alloc1(64000,1024) empty
+realTime:4737.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:18546607.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(32113) empty
+realTime:10563034.000000 ns
+userTime:1|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:59975.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:11878.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:29695166.000000 ns
+userTime:0|ncoreTime:2 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:137008.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:29721.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:21468945.000000 ns
+userTime:1|ncoreTime:0 
+
+remove1(i), add1(i) x 100 empty
+realTime:57508.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:5903.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86661866.000000 ns
+userTime:3|ncoreTime:5 
+
+search1(54020) empty
+realTime:41591610.000000 ns
+userTime:4|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:12583246.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:5481.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86217346.000000 ns
+userTime:2|ncoreTime:6 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:13293261.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:4861.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:86487044.000000 ns
+userTime:2|ncoreTime:6 
+
+remove1(i), add1(i) x 10000 empty
+realTime:10779303.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:5404.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:74687775.000000 ns
+userTime:1|ncoreTime:6 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2216123.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:12936.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77075090.000000 ns
+userTime:2|ncoreTime:4 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3022128.000000 ns
+userTime:0|ncoreTime:1 
+
+alloc2(128000,2048) empty
+realTime:9839.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75177762.000000 ns
+userTime:2|ncoreTime:5 
+
+search2(54020) empty
+realTime:41442515.000000 ns
+userTime:4|ncoreTime:1 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3128446.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:5784.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21573317.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(23623) empty
+realTime:10627300.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:18628.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:4828.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21872022.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:20590.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:4437.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:21381830.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) add2(i) x 100 empty
+realTime:18265.000000 ns
+userTime:0|ncoreTime:0 
+
+
+
+
+OPCJA -Os
+# zbuduj biblioteke wspoldzielona .so
+gcc -Wall -w -Os -fPIC -c myAlloc.c -o myAlloc.o
+gcc -Wall -w -Os -fPIC -shared -o libmyAlloc.so myAlloc.o
+# link
+gcc -Wall -w -Wl,-rpath=. -L. -o zad1_shared main.c -lmyAlloc
+# clear
+rm -f *.o
+alloc1(64000,1024) empty
+realTime:7129.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:21661296.000000 ns
+userTime:0|ncoreTime:1 
+
+search1(23623) empty
+realTime:35015065.000000 ns
+userTime:4|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:48170.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:5210.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:21270193.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:48843.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:7030.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:22420014.000000 ns
+userTime:1|ncoreTime:0 
+
+remove1(i), add1(i) x 100 empty
+realTime:70020.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:22483.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:102491906.000000 ns
+userTime:3|ncoreTime:6 
+
+search1(74246) empty
+realTime:140010185.000000 ns
+userTime:14|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:10826740.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:52385.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:87675607.000000 ns
+userTime:3|ncoreTime:5 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:11079315.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:8066.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:84646471.000000 ns
+userTime:3|ncoreTime:5 
+
+remove1(i), add1(i) x 10000 empty
+realTime:9968636.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:305068.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:78881010.000000 ns
+userTime:0|ncoreTime:7 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2343027.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:291747.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:75115597.000000 ns
+userTime:1|ncoreTime:6 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3017186.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:316391.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:77431288.000000 ns
+userTime:1|ncoreTime:6 
+
+search2(93037) empty
+realTime:142952629.000000 ns
+userTime:14|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:2832051.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:145153.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:20485200.000000 ns
+userTime:0|ncoreTime:2 
+
+search2(4173) empty
+realTime:35546934.000000 ns
+userTime:3|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:17446.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:138157.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19915307.000000 ns
+userTime:0|ncoreTime:2 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:20074.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:138849.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:20159866.000000 ns
+userTime:0|ncoreTime:1 
+
+remove2(i) add2(i) x 100 empty
+realTime:17942.000000 ns
+userTime:0|ncoreTime:0 
+
+# kompilacja zrodla
+gcc -Wall -w -Os -c myAlloc.c -o myAlloc.o
+# statyczna .a
+ar rcs libmyAlloc.a myAlloc.o
+gcc -Wall -w -Os -static main.c -L. -lmyAlloc -o zad1_static
+rm -f *.o	
+alloc1(64000,1024) empty
+realTime:14391.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:30641692.000000 ns
+userTime:1|ncoreTime:1 
+
+search1(4173) empty
+realTime:35274442.000000 ns
+userTime:4|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:55320.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:4462.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:21530138.000000 ns
+userTime:1|ncoreTime:0 
+
+remove1(i) x 100, a potemm add1(i) x 100 empty
+realTime:55264.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) empty
+realTime:4479.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(64000,1024) alloc and fill
+realTime:21427104.000000 ns
+userTime:0|ncoreTime:1 
+
+remove1(i), add1(i) x 100 empty
+realTime:54468.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:5278.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:100774113.000000 ns
+userTime:2|ncoreTime:6 
+
+search1(93037) empty
+realTime:139475024.000000 ns
+userTime:14|ncoreTime:0 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:12533779.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:4028.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85598979.000000 ns
+userTime:3|ncoreTime:4 
+
+remove1(i) x 10000, a potemm add1(i) x 10000 empty
+realTime:12687596.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc1(128000,2048) empty
+realTime:6002.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc1(128000,2048) alloc and fill
+realTime:85518233.000000 ns
+userTime:3|ncoreTime:4 
+
+remove1(i), add1(i) x 10000 empty
+realTime:10770704.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:314322.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:76498296.000000 ns
+userTime:1|ncoreTime:6 
+
+remove2(i) add2(i) x 10000 empty
+realTime:2411275.000000 ns
+userTime:1|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:289473.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:76591973.000000 ns
+userTime:3|ncoreTime:4 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3319407.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) empty
+realTime:313696.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(128000,2048) alloc and fill
+realTime:78518144.000000 ns
+userTime:2|ncoreTime:4 
+
+search2(123775) empty
+realTime:139154322.000000 ns
+userTime:14|ncoreTime:0 
+
+remove2(i) x 10000, a potemm add2(i) x 10000 empty
+realTime:3147001.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:142707.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:20303230.000000 ns
+userTime:0|ncoreTime:1 
+
+search2(39762) empty
+realTime:35028890.000000 ns
+userTime:4|ncoreTime:0 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:15246.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:146778.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19757288.000000 ns
+userTime:0|ncoreTime:2 
+
+remove2(i) x 100, a potemm add2(i) x 100 empty
+realTime:16430.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) empty
+realTime:158900.000000 ns
+userTime:0|ncoreTime:0 
+
+alloc2(64000,1024) alloc and fill
+realTime:19862660.000000 ns
+userTime:1|ncoreTime:0 
+
+remove2(i) add2(i) x 100 empty
+realTime:14716.000000 ns
+userTime:0|ncoreTime:0 
+

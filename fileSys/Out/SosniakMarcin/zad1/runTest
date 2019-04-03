@@ -1,0 +1,45 @@
+#!/bin/bash
+make
+echo 'rozmiar 4'
+./zad1 generate dataTest1 1200 4
+
+./zad1 copy dataTest1 dataTest1_1 1200 4 sys 
+
+./zad1 copy dataTest1 dataTest1_2 1200 4 lib
+
+./zad1 sort dataTest1_1 1200 4 sys
+
+./zad1 sort dataTest1_2 1200 4 lib           
+echo " "; echo " " ; echo " "
+echo "rozmiar 512"
+./zad1 generate dataTest2 1200 512
+
+./zad1 copy dataTest2 dataTest2_1 1200 512 sys 
+
+./zad1 copy dataTest2 dataTest2_2 1200 512 lib
+
+./zad1 sort dataTest2_1 1200 512 sys
+
+./zad1 sort dataTest2_2 1200 512 lib            
+echo " "; echo " "; echo " "
+echo "rozmiar 4096"
+ ./zad1 generate dataTest3 1200 4096                 
+ 
+ ./zad1 copy dataTest3 dataTest3_1 1200 4096 sys 
+ 
+ ./zad1 copy dataTest3 dataTest3_2 1200 4096 lib
+ 
+ ./zad1 sort dataTest3_1 1200 4096 sys
+ 
+ ./zad1 sort dataTest3_2 1200 4096 lib             
+echo " "; echo " "; echo " "
+echo "rozmiar 8192"
+ ./zad1 generate dataTest4 800 8192               
+ 
+ ./zad1 copy dataTest4 dataTest4_1 800 8192 sys 
+ 
+ ./zad1 copy dataTest4 dataTest4_2 800 8192 lib
+                                                             
+ ./zad1 sort dataTest4_1 800 8192 sys
+ 
+ ./zad1 sort dataTest4_2 800 8192 lib             

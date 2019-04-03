@@ -1,0 +1,65 @@
+gcc -Wall -w -c myFS.c -o myFS.o
+ar rcs libmyFS.a myFS.o
+gcc -Wall -w -static main.c -L. -lmyFS -o zad1
+rm -f *.o	
+rozmiar 4
+
+copySys(dataTest1,dataTest1_1,1200,4)
+ RealT:2458824.000000     ,userT:0,coreT:0
+
+copySys(dataTest1,dataTest1_2,1200,4)
+ RealT:109664.000000     ,userT:0,coreT:0
+
+sortSys(dataTest1_1,1200,4)
+ RealT:1134820818.000000     ,userT:35,coreT:78
+
+sortLib(dataTest1_2,1200,4)
+ RealT:1036936417.000000     ,userT:33,coreT:70
+ 
+ 
+ 
+rozmiar 512
+
+copySys(dataTest2,dataTest2_1,1200,512)
+ RealT:2830705.000000     ,userT:0,coreT:0
+
+copySys(dataTest2,dataTest2_2,1200,512)
+ RealT:989742.000000     ,userT:0,coreT:0
+
+sortSys(dataTest2_1,1200,512)
+ RealT:1643429572.000000     ,userT:74,coreT:89
+
+sortLib(dataTest2_2,1200,512)
+ RealT:1600558142.000000     ,userT:87,coreT:72
+ 
+ 
+ 
+rozmiar 4096
+
+copySys(dataTest3,dataTest3_1,1200,4096)
+ RealT:6042820.000000     ,userT:0,coreT:0
+
+copySys(dataTest3,dataTest3_2,1200,4096)
+ RealT:6025307.000000     ,userT:0,coreT:0
+
+sortSys(dataTest3_1,1200,4096)
+ RealT:5065649306.000000     ,userT:395,coreT:110
+
+sortLib(dataTest3_2,1200,4096)
+ RealT:4988399004.000000     ,userT:388,coreT:110
+ 
+ 
+ 
+rozmiar 8192
+
+copySys(dataTest4,dataTest4_1,800,8192)
+ RealT:6238675.000000     ,userT:0,coreT:0
+
+copySys(dataTest4,dataTest4_2,800,8192)
+ RealT:7159220.000000     ,userT:0,coreT:0
+
+sortSys(dataTest4_1,800,8192)
+ RealT:4012834175.000000     ,userT:336,coreT:65
+
+sortLib(dataTest4_2,800,8192)
+ RealT:3989387610.000000     ,userT:332,coreT:65

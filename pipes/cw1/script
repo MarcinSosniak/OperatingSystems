@@ -1,0 +1,6 @@
+#!/bin/bash
+ls -l | grep cw1
+ps aux | grep msosniak | grep code | tail -c 3
+
+
+

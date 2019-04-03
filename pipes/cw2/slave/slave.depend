@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1523873881 source:/sysOp/lab5/cw2/slave/main.c
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+	<string.h>
+

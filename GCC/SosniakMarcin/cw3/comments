@@ -1,0 +1,21 @@
+1) zaskakujaco, alokacja w calosci tablicy callociem, 
+zmiast alokacji tablicy wskaznikow i za nullowanie 
+jej jest szybsze. Prawdopodobine dlatego, ze trzeba 
+wpiasc dane NULL'e. Operacje usun/dodaj zajely z drugiej
+strony duzo mniej czasu  w wersji 2,
+gdyz prosciej zwolnic blok, i wyzerowac wskaznik niz
+zerowac caly blok. Nie dostzeglem szczegolnej roznicy w
+szybkosci wykoniania, zaleznosci od wyokrzystania biblioteki
+statycznej czy dynamicznej, niektore operacje wykonwyaly sie
+klilkanascie % szybciej, innej kilkanascie % wolniej.
+2)Opcja O1 wydaje sie przyspieszac operacje allokacji
+wzgeldem domyslnej, zas O2,O3 i Os ZMNIEJSZAC szybkosc
+wykonwyania operacji alockacji. Jednakze w przypadku
+Delete & insert opecja O1 przyspieszyla znacznie wkonianie
+(prawie 4), zas opcje O2,O3,Os ponad 4 krotnie
+
+
+
+
+
+

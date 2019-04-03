@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1524216040 source:/sysOp/lab5/cw1/main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/wait.h>
+	<sys/types.h>
+	<string.h>
+

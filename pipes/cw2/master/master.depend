@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1523991084 source:/sysOp/lab5/cw2/master/main.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+

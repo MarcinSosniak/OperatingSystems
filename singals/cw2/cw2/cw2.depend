@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1523350321 source:/sysOp/lab4/cw2/cw2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<signal.h>
+	<string.h>
+	<time.h>
+	<sys/wait.h>
+
